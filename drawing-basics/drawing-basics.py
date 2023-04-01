@@ -9,20 +9,8 @@ while True:
     width = int(cap.get(3)) #get width property of capture
     height = int(cap.get(4))#get heigh property of capture
 
-    # create new black canvas of same shape
-    image = np.zeros(frame.shape, np.uint8)
-
-    # get half scale frame
-    smaller_frame = cv2.resize(frame, (0, 0), fx=0.5, fy=0.5)
-
-    # paste smaller frame in top left corner of new canvas
-    image[:height//2, :width//2] = cv2.rotate(smaller_frame, cv2.ROTATE_180)
-    # and bottom left 
-    image[height//2:, :width//2] = smaller_frame
-    # and top right
-    image[:height//2, width//2:] = cv2.rotate(smaller_frame, cv2.ROTATE_180)
-    # and bottom right
-    image[height//2:, width//2:] = smaller_frame
+    # draw a line
+    img = cv2.line(frame, )
 
     # display frame
     cv2.imshow('Frame', image)

@@ -32,7 +32,7 @@ while True:
 
     # Find the convex hull of the hand contour
     cnt = contours[ci]
-    hull = cv2.convexHull(cnt)
+    #hull = cv2.convexHull(cnt)
 
     # Find the convexity defects between the hand contour and its convex hull
     hull = cv2.convexHull(cnt, returnPoints=False)
